@@ -1,0 +1,8 @@
+#!/bin/sh     
+ssh root@192.168.56.171 <<EOF       
+ cd /usr/local/src/nodejs 
+ git pull      
+ npm install --production      
+ pm2 restart all
+ exit      
+EOF
